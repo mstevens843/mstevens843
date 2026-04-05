@@ -1,12 +1,13 @@
-# Hey, I'm Mathew Stevens
-
-I'm a **Full-Stack Developer** with a passion for **crypto, blockchain, and DeFi**.  
-I specialize in **React, Node.js, PostgreSQL, and Web3 integration**, building applications that leverage **real-time blockchain data and DeFi protocols**.
-
-## Featured Projects
-- [SolPulse](https://www.solpulse.net) – A **Solana-based social media platform** for crypto enthusiasts.
-- [Crypto Dashboard](your-deployed-link-here) – A **market analytics dashboard** using CoinGecko API.
-
-## Connect with Me
-- [LinkedIn](https://www.linkedin.com/in/mathewbradleystevens)  
-- [SolPulse](https://solpulse-client.onrender.com)  
+ Mathew Stevens                                                                                                                                                               
+                                                            
+  ▎ Full-stack Solana developer. Building production trading infrastructure.                                                                                                     
+                                                                                                                                                                                 
+  ▎ Projects                                                                                                                                                                     
+                                                            
+  ▎ - https://solpulse.trade — Live Solana trading platform. Automated strategies, multi-DEX routing, 500 concurrent trades. Web, iOS, Android.                                  
+  ▎ - https://github.com/mstevens843/capacitor-solana-mobile-wallet-adapter — First Capacitor plugin for Solana Mobile Wallet Adapter. Open source.
+                                                                                                                                                                                 
+  ▎ Links                                                   
+                                                                                                                                                                                 
+  ▎ - https://www.linkedin.com/in/mathewbradleystevens                                                                                                                           
+  ▎ - https://twitter.com/mattinfra
