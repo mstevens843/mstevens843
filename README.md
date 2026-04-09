@@ -4,7 +4,7 @@
                                                                                                                                                                                  
   ▎ Projects                                                                                                                                                                     
                                                             
-  ▎ - https://solpulse.trade — Live Solana trading platform. Automated strategies, multi-DEX routing, 500 concurrent trades. Web, iOS, Android.                                  
+  ▎ - https://solpulse.trade — Live Solana trading platform. Automated strategies, multi-DEX routing, 1200 concurrent trades. Web, iOS, Android.                                  
   ▎ - https://github.com/mstevens843/capacitor-solana-mobile-wallet-adapter — First Capacitor plugin for Solana Mobile Wallet Adapter. Open source.
                                                                                                                                                                                  
   ▎ Links                                                   
