@@ -1,13 +1,31 @@
- Mathew Stevens                                                                                                                                                               
+  # Mathew Stevens                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                              
+  > Full-stack Solana developer. I build production trading infrastructure, automated execution systems, and cross-platform mobile wallet integrations.                                                                                                                       
+                                                                                                                                                                                                                                                                              
+  > ## Projects                                                                                                                                                                                                                                                               
+
+  > ### [SolPulse](https://solpulse.trade) — Solana Trading Platform                                                                                                                                                                                                          
+  > Automated trading platform with a multi-pillar intelligence engine, real-time execution, and institutional-grade risk management — built solo. Web, iOS, Android. Listed on the Solana dApp Store.
+  >                                                                                                                                                                                                                                                                           
+  > - **Autobot Engine** — Multi-mode scanning (Sniper, DCA, limit orders, smart TP/SL exits). Real-time filters for age, volume, liquidity, and verification. Every loop logged: scan, checks, quote, swap.
+  > - **35 Intelligence Pillars** — Modular scoring and filtering system. Includes dev identity checker, smart money tracking, rug scanner, whale scanner, and more. Each pillar toggles independently — essentially a no-code ML trading strategy builder.                   
+  > - **Risk Engine** — Max daily loss limits, per-trade risk caps, V2 risk with regime awareness, portfolio bucket/category allocation. Institutional-grade risk management exposed through a consumer UI.
+  > - **Execution** — 1,200 concurrent transactions, 10ms monitoring, smart exit triggers. Multi-DEX routing across Solana.                                                                                                                                                   
+  > - **Seed Vault Integration** — Native on-device signing via Solana Seeker hardware. Private keys never leave the device.                                                                                                                                                  
+                                                                                                                                                                                                                                                                              
+  > ### [Capacitor Solana Mobile Wallet Adapter](https://github.com/mstevens843/capacitor-solana-mobile-wallet-adapter)                                                                                                                                                       
+  > First Capacitor plugin for Solana Mobile Wallet Adapter. Open source.
+                                                                                                                                                                                                                                                                              
+  > ### [Godot MWA SDK — Solana Mobile Grant](https://github.com/mstevens843/godot-solana-mwa-example)                                                                                                                                                                        
+  > Brought the Godot Mobile Wallet Adapter SDK to parity with the React Native SDK. Found and fixed **10 bugs** in the SDK during integration — including signal reliability failures, type mismatches causing silent crashes, stale key persistence after deauthorization,
+  and missing biometric confirmation flows. Built a complete example app verified on Solana Seeker hardware with Seed Vault.                                                                                                                                                  
                                                             
-  ▎ Full-stack Solana developer. Building production trading infrastructure.                                                                                                     
-                                                                                                                                                                                 
-  ▎ Projects                                                                                                                                                                     
-                                                            
-  ▎ - https://solpulse.trade — Live Solana trading platform. Automated strategies, multi-DEX routing, 1200 concurrent trades. Web, iOS, Android.                                  
-  ▎ - https://github.com/mstevens843/capacitor-solana-mobile-wallet-adapter — First Capacitor plugin for Solana Mobile Wallet Adapter. Open source.
-                                                                                                                                                                                 
-  ▎ Links                                                   
-                                                                                                                                                                                 
-  ▎ - https://www.linkedin.com/in/mathewbradleystevens                                                                                                                           
-  ▎ - https://twitter.com/mattinfra
+  > ### [Unity MWA SDK — Solana Mobile Grant](https://github.com/mstevens843/unity-solana-mwa-example)                                                                                                                                                                        
+  > Brought the Unity Mobile Wallet Adapter SDK to parity with the React Native SDK. Found and fixed **7 bugs** in the SDK. Implemented extensible auth token caching, comprehensive documentation, and a full example app tested on Seeker hardware.
+                                                                                                                                                                                                                                                                              
+  > ## What I Work With                                     
+  > React, Node.js, TypeScript, Vite, C#, GDScript, C++, Capacitor, Unity, Godot, Solana, Anchor                                                                                                                                                                              
+                                                                                                                                                                                                                                                                              
+  > ## Links
+  > - [LinkedIn](https://www.linkedin.com/in/mathewbradleystevens)                                                                                                                                                                                                            
+  > - [Twitter](https://twitter.com/mattinfra) 
