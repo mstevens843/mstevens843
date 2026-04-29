@@ -11,7 +11,21 @@
   > - **35 Intelligence Pillars** — Modular scoring and filtering system. Includes dev identity checker, smart money tracking, rug scanner, whale scanner, and more. Each pillar toggles independently — essentially a no-code ML trading strategy builder.                   
   > - **Risk Engine** — Max daily loss limits, per-trade risk caps, V2 risk with regime awareness, portfolio bucket/category allocation. Institutional-grade risk management exposed through a consumer UI.
   > - **Execution** — 1,200 concurrent transactions, 10ms monitoring, smart exit triggers. Multi-DEX routing across Solana.                                                                                                                                                   
-  > - **Seed Vault Integration** — Native on-device signing via Solana Seeker hardware. Private keys never leave the device.                                                                                                                                                  
+  > - **Seed Vault Integration** — Native on-device signing via Solana Seeker hardware. Private keys never leave the device.    
+
+
+  > ### [Cocos Creator MWA SDK for Solana](https://github.com/mstevens843/Cocos-Solana-MWA-SDK)
+  
+  **Built from scratch.** The first Solana Mobile Wallet Adapter 2.0 SDK for Cocos Creator. No prior SDK, no template, nothing to fork. Cocos powers 1.7M+ developers and dominates mobile games in Asia (40% of China's mobile titles, 60% of Korea's top 10, $5.56B WeChat mini-game economy). Until this SDK shipped, none of those developers could build on Solana
+  
+  - **Full MWA 2.0 parity:** authorize, SIWS, sign_messages (batch), sign_and_send_transactions, deauthorize, clone_authorization, getCapabilities, deleteAccount. Every method verified on real Solana Seeker hardware.
+  - **Native Android bridge:** JsbBridge protocol over JSON, fresh LocalAssociationScenario per operation, ECDH + AES-GCM encryption, request-ID correlation, 60-second timeouts. Built directly against `clientlib-ktx 2.0.3`.
+  - **Zero npm dependencies for the SDK core:** hand-rolled binary transaction serializer, Base58 codec, RPC client. Drop-in TypeScript module with no external runtime baggage. 
+  - **Multi-wallet matrix:** Phantom, Solflare, Backpack, Jupiter, Seed Vault. All five hardware-verified end-to-end on Seeker.
+  - **Persistent auth caching:** SQLite-backed token storage for silent reconnect across app restarts.
+  - **Token Duel demo game:** bundled real-time portfolio-race game with an on-chain Anchor escrow program on devnet. Pick 3 tokens, stake SOL, settle via signAndSendTransaction. Proves the SDK drives real economic flows, not just wallet prompts.
+
+    MIT-licensed. Open source. Public good infrastructure.                                                                                                                                                                                               
                                                                                                                                                                                                                                                                               
   > ### [Capacitor Solana Mobile Wallet Adapter](https://github.com/mstevens843/capacitor-solana-mobile-wallet-adapter)                                                                                                                                                       
   > First Capacitor plugin for Solana Mobile Wallet Adapter. Open source.
