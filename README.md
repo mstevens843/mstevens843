@@ -4,7 +4,7 @@
                                                                                                                                                                                                                                                                               
    ## Projects                                                                                                                                                                                                                                                               
 
-   ### [SolPulse](https://solpulse.trade) — Solana Trading Platform                                                                                                                                                                                                          
+   ### [SolPulse](https://solpulse.trade) - Solana Trading Platform                                                                                                                                                                                                          
    Automated trading platform with a multi-pillar intelligence engine, real-time execution, and institutional-grade risk management — built solo. Web, iOS, Android. Listed on the Solana dApp Store.
                                                                                                                                                                                                                                                                              
    - **Autobot Engine** — Multi-mode scanning (Sniper, DCA, limit orders, smart TP/SL exits). Real-time filters for age, volume, liquidity, and verification. Every loop logged: scan, checks, quote, swap.
