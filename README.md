@@ -11,7 +11,23 @@
    - **35 Intelligence Pillars** — Modular scoring and filtering system. Includes dev identity checker, smart money tracking, rug scanner, whale scanner, and more. Each pillar toggles independently, essentially a no-code ML trading strategy builder.                   
    - **Risk Engine** — Max daily loss limits, per-trade risk caps, V2 risk with regime awareness, portfolio bucket/category allocation. Institutional-grade risk management exposed through a consumer UI.
    - **Execution** — 1,200 concurrent transactions, 10ms monitoring, smart exit triggers. Multi-DEX routing across Solana.                                                                                                                                                   
-   - **Seed Vault Integration** — Native on-device signing via Solana Seeker hardware. Private keys never leave the device.    
+   - **Seed Vault Integration** — Native on-device signing via Solana Seeker hardware. Private keys never leave the device.  
+
+
+
+ ### Solana Agent Wallet Adapter (https://github.com/mstevens843/solana-agent-wallet-adapter)
+
+  Open-source signing layer for Solana AI agents. Agents request actions, the adapter prepares the signing request, and the user's real wallet approves. No env-var private keys, no embedded signer, no Phantom-only lock-in. Built for MCP, Wallet Standard, Vercel AI, and Solana Agent Kit.
+
+  - Real-wallet approval layer: Routes agent signing through the wallet users already trust. Phantom, Backpack, Solflare, Glow, and other Wallet Standard providers fit the same browser path. The agent never touches the private key.
+  - Multi-framework adapter architecture: One WalletBackend contract powers MCP tools, Vercel AI tools, and a Solana Agent Kit BaseWallet adapter. Framework integrations share the same signing protocol instead of each reinventing wallet approval.
+  - MCP server for agent clients: Ships stdio and HTTP transports with tools for address lookup, message signing, transaction signing, sign-and-send, approval polling, and transaction simulation.
+  - Wallet Standard web backend: Live browser backend for installed Solana wallets. Verified with Backpack on devnet for message signing, transaction signing, and sign-and-send broadcast.
+  - Wallet compatibility fixes: Backpack routes through sign-then-RPC-send to avoid its native sign-and-send wallet failure. Phantom native sign-and-send receives minContextSlot, matching the known mobile workaround.
+  - Polished browser demo: Demonstrates the full flow: agent plan approval with Phantom, wallet switch through Wallet Standard, Backpack message signing, devnet transaction creation, sign-only transaction, and sign-and-send broadcast.
+  - Standards-first roadmap: Designed for Wallet Standard on web, MWA on Android, and wallet deeplinks on iOS. The browser path is live today, mobile-native backends are planned next.
+
+  Apache-2.0. Open source. Public good infrastructure for non-custodial Solana agents.
 
 
    ### [Cocos Creator MWA SDK for Solana](https://github.com/mstevens843/Cocos-Solana-MWA-SDK)
