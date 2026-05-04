@@ -15,7 +15,7 @@
 
 
 
- ### [Solana Agent Wallet Adapter] (https://github.com/mstevens843/solana-agent-wallet-adapter)
+ ### [Solana Agent Wallet Adapter](https://github.com/mstevens843/solana-agent-wallet-adapter)
 
   Open-source signing layer for Solana AI agents. Agents request actions, the adapter prepares the signing request, and the user's real wallet approves. No env-var private keys, no embedded signer, no Phantom-only lock-in. Built for MCP, Wallet Standard, Vercel AI, and Solana Agent Kit.
 
