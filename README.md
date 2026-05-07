@@ -41,7 +41,30 @@
   - **Persistent auth caching:** SQLite-backed token storage for silent reconnect across app restarts.
   - **Token Duel demo game:** bundled real-time portfolio-race game with an on-chain Anchor escrow program on devnet. Pick 3 tokens, stake SOL, settle via signAndSendTransaction. Proves the SDK drives real economic flows, not just wallet prompts.
 
-    MIT-licensed. Open source. Public good infrastructure.                                                                                                                                                                                               
+    MIT-licensed. Open source. Public good infrastructure.    
+
+
+    ### [Unreal Engine MWA SDK for Solana](https://github.com/mstevens843/unreal-solana-mwa)                                                                                                    
+                                                                                                                                                                                              
+  **The first production-ready Solana MWA plugin for Unreal Engine 5.** The community CaveWorld plugin (the only one Solana Mobile's docs link) hand-rolled the MWA wire protocol in C++, last
+   commit June 2023, never shipped sign_messages, no LICENSE. This SDK wraps Solana Mobile's official Kotlin `clientlib-ktx` and exposes a thin C++ shim plus Blueprint surface — one to two  
+  orders of magnitude less code, every protocol fix lands as a Maven version bump.                                                                                                            
+                                                                                                                                                                                            
+  - **Full MWA 2.0 parity:** authorize, reauthorize, deauthorize, sign_messages (batch + detached), sign_transactions, sign_and_send_transactions, SIWS 2.0, get_capabilities, deleteAccount. 
+  Every method exposed as a Blueprint UFUNCTION with delegate, hardware-verified on Solana Seeker.                                                                                            
+  - **Three-layer architecture:** Kotlin plugin driving `MobileWalletAdapter.transact { ... }`, C++ JNI bridge, UObject + UFunction Blueprint surface. UPL XML injects Maven deps, manifest 
+  queries, GameActivity lifecycle hooks, and a foreground keep-alive service for the wallet round-trip.                                                                                       
+  - **Three Sign And Send routes exposed per-call:** native MWA `sign_and_send_transactions`, sign-then-broadcast-via-app-RPC fallback (the path Backpack requires due to a                 
+  `JsonDecodingException` crash in its native handler), or auto. Demo ships all three as side-by-side buttons so dApps can validate custom RPC submit, MEV-protection routes, or simulation   
+  forwarding on every wallet.                                                                                                                                                               
+  - **Multi-pubkey auth cache:** pluggable `ISolanaMWAAuthCache` interface, JSON-file default with one-time migration from the legacy single-record INI layout. Per-pubkey storage,           
+  latest-pointer tracking, in-memory blacklist on Delete Account so reconnect doesn't auto-resurrect a just-deleted account.                                                                  
+  - **Branded approval sheet:** `FSolanaIdentity::SDKDefault()` ships `Solana.Unreal-SDK` with the Solana Mobile favicon by default. dApps shipping their own brand call `MakeSolanaIdentity`
+  Blueprint factory — wallets validate the URI host (Phantom Blowfish, Solflare origin check), so the URI is part of the trust UX.                                                            
+  - **Multi-wallet matrix:** Phantom, Solflare, Backpack, Jupiter, Seed Vault — all five hardware-verified end-to-end on Seeker. Comprehensive `ESolanaWalletType` enum with IDs pinned to  
+  wire-compat with Unity / Godot, plus `USolanaMWAUtils` helpers (base58/base64/hex codec, lamports↔SOL conversion, address shortening, transaction builder) and `USolanaMWAToast` JNI bridge.
+                                                                                                                                                                                            
+  MIT-licensed. Open source. The architectural twin is Virus-Axel's open-source Godot SDK — same wrap-the-Kotlin-clientlib pattern, adapted to Unreal's plugin model.     
                                                                                                                                                                                                                                                                               
    ### [Capacitor Solana Mobile Wallet Adapter](https://github.com/mstevens843/capacitor-solana-mobile-wallet-adapter)                                                                                                                                                       
    First Capacitor plugin for Solana Mobile Wallet Adapter. Open source.
@@ -55,7 +78,7 @@ Implemented get_capabilities directly in the Solana.Unity-SDK source. a real MWA
 mainnet-beta.      
                                                                                                                                                                                                                                                                               
    ## What I Work With                                     
-   React, Node.js, TypeScript, Vite, C#, GDScript, C++, Capacitor, Unity, Godot, Solana, Anchor                                                                                                                                                                              
+   React, Node.js, TypeScript, Vite, C#, GDScript, C++, Capacitor, Unity, Unreal Engine, Godot, Solana, Anchor                                                                                                                                                                              
                                                                                                                                                                                                                                                                               
    ## Links
    - [LinkedIn](https://www.linkedin.com/in/mathewbradleystevens)                                                                                                                                                                                                            
