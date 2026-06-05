@@ -30,6 +30,24 @@
   Apache-2.0. Open source. Public good infrastructure for non-custodial Solana agents.
 
 
+  ### [iOS Solana Wallet Adapter (iWA)](https://github.com/mstevens843/ios-solana-wallet-adapter)
+
+  Native Swift signing adapter for Solana iOS apps. Android has Mobile Wallet Adapter, web has Wallet Standard, but native iOS apps are still stuck hand-rolling Phantom, Solflare, and Backpack deeplinks or moving to WalletConnect / embedded custody.
+  iWA gives iOS apps one URL/callback API for external wallet signing: the app keeps no private keys, the wallet shows approval, and the adapter handles encrypted requests and callbacks.
+
+  - **Not MWA-for-iOS:** MWA is Android-only by protocol. iWA is the iOS-native counterpart built around universal links, wallet-specific deeplinks, and request/response callbacks.
+  - **Multi-wallet Swift Package:** one `WalletAdapter` API across Phantom, Solflare, and Backpack for connect, sign message, sign transaction, sign all transactions, sign and send, and disconnect.
+  - **Real encrypted wire layer:** CryptoKit X25519 ephemeral keys, TweetNaCl-compatible NaCl box encryption, Base58 wire encoding, nonce/session handling, encrypted callback decoding, and wallet error mapping.
+  - **SwiftUI/UIKit lifecycle layer:** `SolanaWalletAdapterUI` turns fragile wallet URL bounces into async app calls with `.onOpenURL` routing, pending request cancellation, Keychain-backed state, and deterministic smoke-test logging.
+  - **Wallet picker UX:** SwiftUI picker for Phantom, Solflare, Backpack, and Jupiter Mobile track, with Android-style **Just Once** / **Always** selection so native iOS apps can remember the user's preferred wallet.
+  - **MWA-style app semantics on iOS transport:** `getCapabilities`, `signInWithSolana`, `authorize`, `deauthorize`, `signMessages`, `signTransactions`, and `signAndSendTransactions` aliases let iOS share the same app-level wallet vocabulary without
+  falsely claiming MWA protocol support.
+  - **Adds the missing iOS layer to the stack:** pairs with Android MWA work, web/agent Wallet Standard work, and game-engine SDKs so Solana apps can keep a consistent non-custodial signing model across web, agents, Android, iOS, Unity, Unreal, Godot,
+  Cocos, and Capacitor.
+
+  Apache-2.0. Public RC `0.2.0-rc.1`: local coverage and simulator mock flows are green; physical-iPhone wallet smoke logs are the remaining gate before stable production wording.
+
+
    ### [Cocos Creator MWA SDK for Solana](https://github.com/mstevens843/Cocos-Solana-MWA-SDK)
   
   **Built from scratch.** The first Solana Mobile Wallet Adapter 2.0 SDK for Cocos Creator. No prior SDK, no template, nothing to fork. Cocos powers 1.7M+ developers and dominates mobile games in Asia (40% of China's mobile titles, 60% of Korea's top 10, $5.56B WeChat mini-game economy). Until this SDK shipped, none of those developers could build on Solana
