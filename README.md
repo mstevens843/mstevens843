@@ -48,6 +48,26 @@
   Apache-2.0. Public RC `0.2.0-rc.1`: local coverage and simulator mock flows are green; physical-iPhone wallet smoke logs are the remaining gate before stable production wording.
 
 
+  ### [TxShield](https://github.com/mstevens843/solana-tx-guard) - Open Solana Transaction Safety Layer
+
+  Open, embeddable pre-sign transaction safety for Solana. TxShield analyzes raw transaction bytes before wallet approval, flags wallet-drainer patterns, and provides an open
+  alternative to closed hosted scanners like Blowfish and Blockaid.
+
+  - **Static transaction analyzer:** Decodes Solana transactions locally and flags risky patterns before signature. Fail-closed by design: sensitive decode failures are
+  treated as unsafe, not silently marked safe.
+  - **Drain detection rules:** Built-in rule pack for durable nonce abuse, authority changes, token approvals, system assigns, suspicious writable accounts, and other wallet-
+  drainer primitives.
+  - **Simulation and diff layer:** Optional RPC-backed enrichment adds inner-CPI walking, balance/owner/delegate diffs, and divergence checks without replacing the static
+  verdict.
+  - **Atomic guard path:** Lighthouse-based on-chain assertions can force unsafe or divergent execution to revert instead of relying only on UI warnings.
+  - **Embeddable packages:** TypeScript core, rules, registry, simulation, React UI hooks/components, and CLI scanner for browser apps, Node, React Native, Capacitor, and CI
+  gates.
+  - **Security-first positioning:** Designed for wallets, dApps, trading UIs, mobile apps, and agent signing flows that need transaction safety without outsourcing every
+  approval to a closed API.
+
+  MIT-licensed. Open source. Pre-1.0 and in active development.
+
+
    ### [Cocos Creator MWA SDK for Solana](https://github.com/mstevens843/Cocos-Solana-MWA-SDK)
   
   **Built from scratch.** The first Solana Mobile Wallet Adapter 2.0 SDK for Cocos Creator. No prior SDK, no template, nothing to fork. Cocos powers 1.7M+ developers and dominates mobile games in Asia (40% of China's mobile titles, 60% of Korea's top 10, $5.56B WeChat mini-game economy). Until this SDK shipped, none of those developers could build on Solana
