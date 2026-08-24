@@ -35,11 +35,9 @@ Original Terminal-Bench 3 benchmark task designed to expose false-positive failu
 
 The task models a durable approval outbox for AI-approved external actions where workers can crash, deliveries can duplicate, users can revoke or supersede actions, and external tools can return `UNKNOWN` before authoritative receipts arrive.
 
-- **Frontier-agent failures** — Achieved 6/6 clean reward-0 trials across Claude Opus and OpenAI Codex, where agents submitted locally plausible solutions that failed the hidden deterministic verifier.
-- **Distributed-systems core** — Tested exactly-once execution, stable idempotency keys, durable intent recording, receipt reconciliation, revocation boundaries, progress guarantees, and legal audit-state transitions.
-- **False-positive design** — Opus handled uncertainty conservatively but left actions permanently `IN_DOUBT`; Codex drained workflows but corrupted audit history with illegal `ACKED -> REVOKED` transitions.
-- **Verifier hardening** — Isolated tool-ledger collection, root-only control channels, unprivileged execution, cheat oracles, and deterministic reward checks to close reward-hacking paths.
-- **Real-world relevance** — Mirrors AI agents approving payments, swaps, tool calls, or other irreversible external actions where `UNKNOWN` is not a result, but a durable obligation to reconcile.
+- **Frontier-agent false positives** — Built a Terminal-Bench 3 task that achieved 6/6 clean reward-0 trials across Claude Opus and OpenAI Codex.
+- **Durable outbox challenge** — Tested `UNKNOWN` external outcomes, receipt reconciliation, revocation, exactly-once execution, progress, and audit-state legality.
+- **Verifier hardening** — Isolated tool-ledger collection, root-only controls, unprivileged execution, cheat oracles, and deterministic reward checks.
 
 ### [ConfigPilot](https://github.com/mstevens843/ConfigPilot) - AI Fund / Andrew Ng OEM Decision Engine
 
@@ -47,11 +45,9 @@ Built for an AI Fund / Andrew Ng team challenge around applying AI to B2B OEM de
 
 ConfigPilot is an AI-assisted OEM configuration engine where an LLM proposes commercial recommendations, then deterministic guardrails verify whether those recommendations are safe against margin, inventory, lead-time, policy, and audit constraints before approval.
 
-- **AI + deterministic controls** — AI generates recommendations, but structured business logic validates commercial safety before a decision reaches the user.
-- **OEM decision workflow** — Models real B2B configuration tradeoffs across pricing, inventory availability, delivery timing, margin protection, and explainability.
-- **Audit-first architecture** — Produces traceable recommendation records so decision-makers can see what was proposed, why it passed or failed, and which constraints were triggered.
-- **Full-stack demo** — Built the working product demo and codebase across frontend, backend, validation logic, and review workflow.
-- **Business-facing AI system** — Focused on practical AI adoption inside enterprise decision processes rather than open-ended chat.
+- **AI + deterministic controls** — LLM proposes OEM recommendations; business rules verify margin, inventory, lead-time, policy, and audit constraints before approval.
+- **Full-stack decision workflow** — Built the working demo across frontend, backend, validation logic, recommendation review, and approval flow.
+- **Business-facing AI system** — Focused on practical AI adoption for B2B commercial decision-making, not open-ended chat.
 
 
 ## Open-Source Infrastructure
