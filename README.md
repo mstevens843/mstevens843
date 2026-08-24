@@ -35,7 +35,7 @@ Original Terminal-Bench 3 benchmark task designed to expose false-positive failu
 
 The task models a durable approval outbox for AI-approved external actions where workers can crash, deliveries can duplicate, users can revoke or supersede actions, and external tools can return `UNKNOWN` before authoritative receipts arrive.
 
-- **Frontier-agent false positives** — Built a Terminal-Bench 3 task that achieved 6/6 clean reward-0 trials across Claude Opus and OpenAI Codex.
+- **Frontier-agent false positives** — Built a Terminal-Bench 3 task that achieved clean reward-0 trials across Claude Opus and OpenAI Codex.
 - **Durable outbox challenge** — Tested `UNKNOWN` external outcomes, receipt reconciliation, revocation, exactly-once execution, progress, and audit-state legality.
 - **Verifier hardening** — Isolated tool-ledger collection, root-only controls, unprivileged execution, cheat oracles, and deterministic reward checks.
 
