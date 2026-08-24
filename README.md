@@ -1,6 +1,6 @@
 # Mathew Stevens
 
-Full-stack software engineer building live products across web, mobile, backend systems, real-time infrastructure, SDKs, developer tools, and AI-agent workflows.
+Full-stack software engineer building live products across web, mobile, backend systems, real-time infrastructure, SDKs, developer tools, AI-agent workflows, and AI evaluation systems.
 
 I solo-built and launched Agentic and SolPulse: two production products with 1,750+ combined users, 60+ reviews, 4.2★–4.3★ ratings, app store releases, and real production usage.
 
@@ -25,6 +25,34 @@ Solo-built production trading platform across web, iOS, and Android with 800+ us
 - **Risk controls** — Max daily loss limits, per-trade risk caps, portfolio buckets, and regime-aware controls exposed through a consumer UI.
 - **Full stack** — React/Vite, Node/Express, PostgreSQL/Prisma, Redis, WebSockets, SSE, backend APIs, database design, frontend UX, mobile releases, and production support.
 - **Non-custodial signing** — Wallet approval flows where private keys remain inside user wallets/devices.
+
+
+## AI Systems and Evaluation
+
+### [Klavis Terminal-Bench 3 Durable Outbox Benchmark](REPO_LINK_PENDING)
+
+Original Terminal-Bench 3 benchmark task designed to expose false-positive failures in frontier coding agents.
+
+The task models a durable approval outbox for AI-approved external actions where workers can crash, deliveries can duplicate, users can revoke or supersede actions, and external tools can return `UNKNOWN` before authoritative receipts arrive.
+
+- **Frontier-agent failures** — Achieved 6/6 clean reward-0 trials across Claude Opus and OpenAI Codex, where agents submitted locally plausible solutions that failed the hidden deterministic verifier.
+- **Distributed-systems core** — Tested exactly-once execution, stable idempotency keys, durable intent recording, receipt reconciliation, revocation boundaries, progress guarantees, and legal audit-state transitions.
+- **False-positive design** — Opus handled uncertainty conservatively but left actions permanently `IN_DOUBT`; Codex drained workflows but corrupted audit history with illegal `ACKED -> REVOKED` transitions.
+- **Verifier hardening** — Isolated tool-ledger collection, root-only control channels, unprivileged execution, cheat oracles, and deterministic reward checks to close reward-hacking paths.
+- **Real-world relevance** — Mirrors AI agents approving payments, swaps, tool calls, or other irreversible external actions where `UNKNOWN` is not a result, but a durable obligation to reconcile.
+
+### [ConfigPilot](https://github.com/mstevens843/ConfigPilot) - AI Fund / Andrew Ng OEM Decision Engine
+
+Built for an AI Fund / Andrew Ng team challenge around applying AI to B2B OEM decision-making.
+
+ConfigPilot is an AI-assisted OEM configuration engine where an LLM proposes commercial recommendations, then deterministic guardrails verify whether those recommendations are safe against margin, inventory, lead-time, policy, and audit constraints before approval.
+
+- **AI + deterministic controls** — AI generates recommendations, but structured business logic validates commercial safety before a decision reaches the user.
+- **OEM decision workflow** — Models real B2B configuration tradeoffs across pricing, inventory availability, delivery timing, margin protection, and explainability.
+- **Audit-first architecture** — Produces traceable recommendation records so decision-makers can see what was proposed, why it passed or failed, and which constraints were triggered.
+- **Full-stack demo** — Built the working product demo and codebase across frontend, backend, validation logic, and review workflow.
+- **Business-facing AI system** — Focused on practical AI adoption inside enterprise decision processes rather than open-ended chat.
+
 
 ## Open-Source Infrastructure
 
