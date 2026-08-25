@@ -29,7 +29,7 @@ Solo-built production trading platform across web, iOS, and Android with 800+ us
 
 ## AI Systems and Evaluation
 
-### [Klavis Terminal-Bench 3 Durable Outbox Benchmark](REPO_LINK_PENDING)
+### [Klavis Terminal-Bench 3 Durable Outbox Benchmark](https://github.com/mstevens843/terminal-bench-durable-outbox)
 
 Original Terminal-Bench 3 benchmark task designed to expose false-positive failures in frontier coding agents.
 
