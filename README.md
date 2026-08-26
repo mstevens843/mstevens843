@@ -8,12 +8,12 @@ I solo-built and launched Agentic and SolPulse: two production products with 1,7
 
 ### [Agentic](https://agentic-signer.com) - Multi-Wallet AI Agent Signer
 
-AI-agent wallet application where agents prepare actions and users approve through their own wallets. Live across web, iOS, Android, desktop, CLI, MCP tools, and SDK surfaces.
+ AI-agent wallet application where agents prepare wallet actions and external payment requests while users approve through their own wallets. Live across web, iOS, Android, desktop, CLI, MCP tools, and SDK surfaces.
 
 - **Traction** — 1,000+ users in 2 months, 4.2★ rating, 36 reviews.
 - **Non-custodial approval model** — Agents propose actions; users approve with their own wallets; private keys never leave the device.
 - **Agent workflows** — Research tokens/wallets, check market conditions, set constraints, and prepare sends, swaps, limit orders, DCA schedules, lending/borrowing moves, and message/transaction signing.
-- **Shared backend architecture** — One WalletBackend powers browser app, mobile paths, desktop shell, CLI, MCP tools, Vercel AI tools, and Solana Agent Kit adapter.
+- **Shared agent/payment architecture** — One WalletBackend powers browser app, mobile paths, desktop shell, CLI, MCP tools, Vercel AI tools, Solana Agent Kit adapter, A2A AgentCard metadata, and AP2/ACP/MPP payment- adapter flows.
 - **Production signing UX** — Approval polling, transaction simulation, sign-and-send flows, Wallet Standard support, and live wallet review cards inside chat.
 
 ### [SolPulse](https://solpulse.trade) - Real-Time Trading Platform
@@ -31,13 +31,11 @@ Solo-built production trading platform across web, iOS, and Android with 800+ us
 
 ### [Klavis Terminal-Bench 3 Durable Outbox Benchmark](https://github.com/mstevens843/terminal-bench-durable-outbox)
 
-Original Terminal-Bench 3 benchmark task designed to expose false-positive failures in frontier coding agents.
+**6/6 frontier agents failed with clean reward-0 results.** Original Terminal-Bench 3 task modeling a durable approval outbox: turning an approved AI action into an executed external action exactly once while workers crash mid-call, deliveries duplicate, approvals are revoked, and the external tool returns `UNKNOWN` before an authoritative receipt arrives.
 
-The task models a durable approval outbox for AI-approved external actions where workers can crash, deliveries can duplicate, users can revoke or supersede actions, and external tools can return `UNKNOWN` before authoritative receipts arrive.
-
-- **Frontier-agent false positives** — Built a Terminal-Bench 3 task that achieved clean reward-0 trials across Claude Opus and OpenAI Codex.
-- **Durable outbox challenge** — Tested `UNKNOWN` external outcomes, receipt reconciliation, revocation, exactly-once execution, progress, and audit-state legality.
-- **Verifier hardening** — Isolated tool-ledger collection, root-only controls, unprivileged execution, cheat oracles, and deterministic reward checks.
+- **6/6 clean reward-0 trials** — 3 Claude Opus runs and 3 OpenAI Codex runs failed without timeouts, API errors, or orphaned runs; the reference implementation passes 267/267 checks.
+- **Real false-positive failures** — Agents produced locally plausible implementations that still mishandled `UNKNOWN` outcomes, receipt reconciliation, revocation, exactly-once execution, progress, or audit-state legality. 
+- **Adversarial verifier hardening** — Built isolated tool-ledger collection, process separation, root-only controls, unprivileged execution, cheat oracles, and deterministic reward checks to prevent reward-hacking paths.
 
 ### [ConfigPilot](https://github.com/mstevens843/ConfigPilot) - AI Fund / Andrew Ng OEM Decision Engine
 
