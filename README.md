@@ -27,6 +27,7 @@ Solo-built production trading platform across web, iOS, and Android with 800+ us
 - **Non-custodial signing** — Wallet approval flows where private keys remain inside user wallets/devices.
 
 
+
 ## AI Systems and Evaluation
 
 ### [Klavis Terminal-Bench 3 Durable Outbox Benchmark](https://github.com/mstevens843/terminal-bench-durable-outbox)
@@ -46,6 +47,15 @@ ConfigPilot is an AI-assisted OEM configuration engine where an LLM proposes com
 - **AI + deterministic controls** — LLM proposes OEM recommendations; business rules verify margin, inventory, lead-time, policy, and audit constraints before approval.
 - **Full-stack decision workflow** — Built the working demo across frontend, backend, validation logic, recommendation review, and approval flow.
 - **Business-facing AI system** — Focused on practical AI adoption for B2B commercial decision-making, not open-ended chat.
+
+### AI Agent Safety Infrastructure Suite
+
+Four open-source projects for safer AI agents, external tool execution, prompt-injection containment, and model behavior regression testing.
+
+- **[Durable Agent Outbox](https://github.com/mstevens843/durable-agent-outbox)** — TypeScript infrastructure for AI agents that execute real external actions without duplicating side effects during crashes, retries, timeouts, `UNKNOWN` outcomes, revocation, or receipt reconciliation.
+- **[Agent Context Containment](https://github.com/mstevens843/agent-context-containment)** — TypeScript policy engine that blocks indirect prompt-injection attacks by tracking source provenance, tool capability, argument role, and approval receipts.
+- **[Model Regression Sentinel](https://github.com/mstevens843/model-regression-sentinel)** — TypeScript CLI for detecting silent model-alias behavior drift by rerunning frozen prompt corpora against baselines and confirmation runs.
+- **[Toolcall Risk Classifier](https://github.com/mstevens843/toolcall-risk-classifier)** — Python risk-scoring and evaluation harness for proposed AI-agent tool calls, with conformance tests, leakage audits, and benchmark-style failure analysis.
 
 
 ## Open-Source Infrastructure
