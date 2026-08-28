@@ -2,7 +2,7 @@
 
 Full-stack software engineer building live products across web, mobile, backend systems, real-time infrastructure, SDKs, developer tools, AI-agent workflows, and AI evaluation systems.
 
-I solo-built and launched Agentic and SolPulse: two production products with 1,750+ combined users, 60+ reviews, 4.2★–4.3★ ratings, app store releases, and real production usage.
+I solo-built and launched Agentic and SolPulse: two production products with 2250+ combined users, 60+ reviews, 4.2★–4.3★ ratings, app store releases, and real production usage.
 
 ## Shipped Products
 
@@ -10,7 +10,7 @@ I solo-built and launched Agentic and SolPulse: two production products with 1,7
 
  AI-agent wallet application where agents prepare wallet actions and external payment requests while users approve through their own wallets. Live across web, iOS, Android, desktop, CLI, MCP tools, and SDK surfaces.
 
-- **Traction** — 1,000+ users in 2 months, 4.2★ rating, 36 reviews.
+- **Traction** — 1,250+ users in 2 months, 4.2★ rating, 36 reviews.
 - **Non-custodial approval model** — Agents propose actions; users approve with their own wallets; private keys never leave the device.
 - **Agent workflows** — Research tokens/wallets, check market conditions, set constraints, and prepare sends, swaps, limit orders, DCA schedules, lending/borrowing moves, and message/transaction signing.
 - **Shared agent/payment architecture** — One WalletBackend powers browser app, mobile paths, desktop shell, CLI, MCP tools, Vercel AI tools, Solana Agent Kit adapter, A2A AgentCard metadata, and AP2/ACP/MPP payment- adapter flows.
@@ -18,7 +18,7 @@ I solo-built and launched Agentic and SolPulse: two production products with 1,7
 
 ### [SolPulse](https://solpulse.trade) - Real-Time Trading Platform
 
-Solo-built production trading platform across web, iOS, and Android with 800+ users, 26 reviews, and a 4.3★ rating.
+Solo-built production trading platform across web, iOS, and Android with 1000+ users, 26 reviews, and a 4.3★ rating.
 
 - **Execution engine** — DCA, limit orders, smart TP/SL exits, routing, priority-fee controls, execution logs, and 1,200 concurrent transaction monitors at 10ms intervals.
 - **35 intelligence signals** — Token risk, liquidity, smart-money activity, dev identity, rug/fraud detection, whale activity, and real-time filters.
