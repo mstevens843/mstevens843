@@ -28,15 +28,32 @@ Solo-built production trading platform across web, iOS, and Android with 800+ us
 
 
 
-## AI Systems and Evaluation
+## AI Systems, Reliability, and Evaluation
+
+### [Capability Record Replay](https://github.com/mstevens843/capability-record-replay) - Deterministic Agent Automation Runtime
+
+Model-to-capability runtime for legacy back-office applications: an LLM drives a workflow once, the run is converted into a typed/versioned capability artifact, and future executions replay deterministically with no model in the decision path.
+
+- **Model-free replay** — Verified a live Claude Opus discovery run whose synthesized artifact replayed without a model, separating `ok`, typed business outcomes, recoverable states, and hard failures.
+- **Legacy UI surfaces** — Built browser and terminal/green-screen surfaces with normalized observations, typed actions, policy chokepoints, evidence journals, redaction canaries, and CLI replay.
+- **Conformance with teeth** — 25 hostile fixture scenarios killed 9/9 weakened replay engines, including 13 false-success failures where a broken engine would have reported success for an unsafe or incomplete run.
 
 ### [Klavis Terminal-Bench 3 Durable Outbox Benchmark](https://github.com/mstevens843/terminal-bench-durable-outbox)
 
 **6/6 frontier agents failed with clean reward-0 results.** Original Terminal-Bench 3 task modeling a durable approval outbox: turning an approved AI action into an executed external action exactly once while workers crash mid-call, deliveries duplicate, approvals are revoked, and the external tool returns `UNKNOWN` before an authoritative receipt arrives.
 
 - **6/6 clean reward-0 trials** — 3 Claude Opus runs and 3 OpenAI Codex runs failed without timeouts, API errors, or orphaned runs; the reference implementation passes 267/267 checks.
-- **Real false-positive failures** — Agents produced locally plausible implementations that still mishandled `UNKNOWN` outcomes, receipt reconciliation, revocation, exactly-once execution, progress, or audit-state legality. 
+- **Real false-positive failures** — Agents produced locally plausible implementations that still mishandled `UNKNOWN` outcomes, receipt reconciliation, revocation, exactly-once execution, progress, or audit-state legality.
 - **Adversarial verifier hardening** — Built isolated tool-ledger collection, process separation, root-only controls, unprivileged execution, cheat oracles, and deterministic reward checks to prevent reward-hacking paths.
+
+### Agent Reliability and Eval Integrity Suite
+
+Open-source systems for durable external actions, runtime crash behavior, benchmark verifier integrity, and success-judge reliability.
+
+- **[Durable Agent Outbox](https://github.com/mstevens843/durable-agent-outbox)** — TypeScript infrastructure for AI agents that execute real external actions without duplicating side effects during crashes, retries, timeouts, `UNKNOWN` outcomes, revocation, or receipt reconciliation.
+- **[Crashpoint](https://github.com/mstevens843/crashpoint)** — Crash/recovery conformance kit measuring exactly-once external side effects across LangGraph, Temporal, and DBOS through an out-of-process ledger the runtime cannot forge.
+- **[Cheat-Oracle](https://github.com/mstevens843/cheat-oracle)** — Defensive verifier-hardening audit showing how in-container answer-key detectors can undercount benchmark reward hacking, plus a tamper-evident out-of-container detector design.
+- **[Judge-Artifact](https://github.com/mstevens843/judge-artifact)** — Eval-integrity audit measuring how shipped success graders over- and under-credit identical agent transcripts, including real prompt-injection ASR inflation on AgentDojo data.
 
 ### [ConfigPilot](https://github.com/mstevens843/ConfigPilot) - AI Fund / Andrew Ng OEM Decision Engine
 
@@ -48,11 +65,8 @@ ConfigPilot is an AI-assisted OEM configuration engine where an LLM proposes com
 - **Full-stack decision workflow** — Built the working demo across frontend, backend, validation logic, recommendation review, and approval flow.
 - **Business-facing AI system** — Focused on practical AI adoption for B2B commercial decision-making, not open-ended chat.
 
-### AI Agent Safety Infrastructure Suite
+### Additional AI Safety Tools
 
-Four open-source projects for safer AI agents, external tool execution, prompt-injection containment, and model behavior regression testing.
-
-- **[Durable Agent Outbox](https://github.com/mstevens843/durable-agent-outbox)** — TypeScript infrastructure for AI agents that execute real external actions without duplicating side effects during crashes, retries, timeouts, `UNKNOWN` outcomes, revocation, or receipt reconciliation.
 - **[Agent Context Containment](https://github.com/mstevens843/agent-context-containment)** — TypeScript policy engine that blocks indirect prompt-injection attacks by tracking source provenance, tool capability, argument role, and approval receipts.
 - **[Model Regression Sentinel](https://github.com/mstevens843/model-regression-sentinel)** — TypeScript CLI for detecting silent model-alias behavior drift by rerunning frozen prompt corpora against baselines and confirmation runs.
 - **[Toolcall Risk Classifier](https://github.com/mstevens843/toolcall-risk-classifier)** — Python risk-scoring and evaluation harness for proposed AI-agent tool calls, with conformance tests, leakage audits, and benchmark-style failure analysis.
@@ -117,8 +131,8 @@ Unity wallet adapter example app and SDK integration work.
 
 ## What I Work With
 
-TypeScript, JavaScript, React, Vite, Node.js, Express, PostgreSQL, Prisma, Redis, WebSockets, SSE, REST APIs, Swift, SwiftUI, Kotlin, Java, C#, C++, GDScript, Capacitor, Unity, Unreal
-Engine, Godot, Cocos Creator, SDK engineering, CLI tools, MCP, Vercel AI SDK, wallet integrations, non-custodial signing flows, and production support.
+TypeScript, JavaScript, React, Vite, Node.js, Express, PostgreSQL, Prisma, Redis, WebSockets, SSE, REST APIs, Swift, SwiftUI, Kotlin, Java, C#, C++, GDScript, Capacitor, Unity, Unreal Engine,Godot, Cocos Creator, SDK engineering, CLI tools, MCP, Vercel AI SDK, Playwright, Docker, conformance suites, deterministic
+interpreters, policy gates, wallet integrations, non-custodial signing flows, and production support.
 
 ## Links
 
