@@ -57,13 +57,13 @@ Open-source systems for durable external actions, runtime crash behavior, benchm
 
 ### [ConfigPilot](https://github.com/mstevens843/ConfigPilot) - AI Fund / Andrew Ng OEM Decision Engine
 
-Built for an AI Fund / Andrew Ng team challenge around applying AI to B2B OEM decision-making.
+Invited by AI Fund as one of 12 engineers to build against a B2B sales problem posed by a Fortune 100 OEM.
 
-ConfigPilot is an AI-assisted OEM configuration engine where an LLM proposes commercial recommendations, then deterministic guardrails verify whether those recommendations are safe against margin, inventory, lead-time, policy, and audit constraints before approval.
+ConfigPilot is a decision engine for commercial configuration and pricing. An LLM proposes recommendations; a deterministic layer verifies each one against margin floors, live inventory, lead-time feasibility, and policy rules before it reaches a seller. Anything failing a check is blocked or flagged with an audit trail naming the constraint that caught it.
 
-- **AI + deterministic controls** — LLM proposes OEM recommendations; business rules verify margin, inventory, lead-time, policy, and audit constraints before approval.
-- **Full-stack decision workflow** — Built the working demo across frontend, backend, validation logic, recommendation review, and approval flow.
-- **Business-facing AI system** — Focused on practical AI adoption for B2B commercial decision-making, not open-ended chat.
+- **The model never has final say** - every recommendation passes through business rules that can veto it, so an LLM error becomes a blocked suggestion instead of a bad quote.
+- **Full-stack delivery** - frontend, backend, validation logic, recommendation review, and approval flow, shipped as a working demo with a PRD and technical design doc.
+- **Why it's built this way** - a wrong OEM quote costs margin or breaks a delivery commitment, so correctness has to be enforced outside the model rather than prompted into it.
 
 ### Additional AI Safety Tools
 
