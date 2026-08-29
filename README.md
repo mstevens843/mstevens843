@@ -2,7 +2,7 @@
 
 Full-stack software engineer building live products across web, mobile, backend systems, real-time infrastructure, SDKs, developer tools, AI-agent workflows, and AI evaluation systems.
 
-I solo-built and launched Agentic and SolPulse: two production products with 2250+ combined users, 60+ reviews, 4.2★–4.3★ ratings, app store releases, and real production usage.
+I built and launched **[Agentic](https://agentic-signer.com)** and **[SolPulse](https://solpulse.trade)**: two production products across web, iOS, and Android with **2,250+ users**, **62 reviews**, 4.2★–4.3★ ratings, and live App Store, Google Play, and Solana dApp Store releases.
 
 ## Shipped Products
 
@@ -18,7 +18,7 @@ I solo-built and launched Agentic and SolPulse: two production products with 225
 
 ### [SolPulse](https://solpulse.trade) - Real-Time Trading Platform
 
-Solo-built production trading platform across web, iOS, and Android with 1000+ users, 26 reviews, and a 4.3★ rating.
+Solo-built production trading platform across web, iOS, and Android with 1,000+ users, 26 reviews, and a 4.3★ rating.
 
 - **Execution engine** — DCA, limit orders, smart TP/SL exits, routing, priority-fee controls, execution logs, and 1,200 concurrent transaction monitors at 10ms intervals.
 - **35 intelligence signals** — Token risk, liquidity, smart-money activity, dev identity, rug/fraud detection, whale activity, and real-time filters.
@@ -91,6 +91,8 @@ Open, embeddable pre-sign transaction safety system for wallets, dApps, trading 
 - **Drain detection rules** — Durable nonce abuse, authority changes, token approvals, system assigns, suspicious writable accounts, and wallet-drainer primitives.
 - **Simulation and diff layer** — Optional RPC enrichment for inner-CPI walking, balance/owner/delegate diffs, and divergence checks.
 - **Embeddable packages** — TypeScript core, rules, registry, simulation, React hooks/components, and CLI scanner for browser apps, Node, React Native, Capacitor, and CI gates.
+- **Proven on mainnet** - atomic-guard behavior verified against real mainnet transactions, not just fixtures.
+- **Test suite** - [N] tests covering rule detection, simulation diffing, and the embeddable packages.
 
 ## SDKs and Engine Integrations
 
@@ -119,7 +121,8 @@ Capacitor plugin for native Android Mobile Wallet Adapter support from hybrid mo
 Multi-wallet Godot example app and SDK integration work.
 
 - Seeker hardware verification across Seed Vault, Phantom, Solflare, Backpack, and Jupiter.
-- Merged upstream PRs for reconnect/full state reset, getCapabilities, sign-and-send bridge support, SIWS wallet-proof APIs, and auth-token caching.
+- Three merged upstream PRs for reconnect/full state reset, getCapabilities, sign-and-send bridge support, SIWS wallet-proof APIs, and auth-token caching.
+- Found 10 integration bugs during hardware testing.
 
 ### [Unity Mobile Wallet Adapter Example](https://github.com/mstevens843/unity-solana-mwa-example)
 
