@@ -2,7 +2,7 @@
 
 Full-stack software engineer building live products across web, mobile, backend systems, real-time infrastructure, SDKs, developer tools, AI-agent workflows, and AI evaluation systems.
 
-I built and launched **[Agentic](https://agentic-signer.com)** and **[SolPulse](https://solpulse.trade)**: two production products across web, iOS, and Android with **2,250+ users**, **62 reviews**, 4.2★–4.3★ ratings, and live App Store, Google Play, and Solana dApp Store releases.
+I built and launched **[Agentic](https://agentic-signer.com)** and **[SolPulse](https://solpulse.trade)**: two production products across web, iOS, and Android with **2,250+ users**, **64 reviews**, 4.2★–4.3★ ratings, and live App Store, Google Play, and Solana dApp Store releases.
 
 ## Shipped Products
 
@@ -10,7 +10,7 @@ I built and launched **[Agentic](https://agentic-signer.com)** and **[SolPulse](
 
  AI-agent wallet application where agents prepare wallet actions and external payment requests while users approve through their own wallets. Live across web, iOS, Android, desktop, CLI, MCP tools, and SDK surfaces.
 
-- **Traction** — 1,250+ users in 2 months, 4.2★ rating, 36 reviews.
+- **Traction** — 1,250+ users in 2 months, 4.2★ rating, 38 reviews.
 - **Non-custodial approval model** — Agents propose actions; users approve with their own wallets; private keys never leave the device.
 - **Agent workflows** — Research tokens/wallets, check market conditions, set constraints, and prepare sends, swaps, limit orders, DCA schedules, lending/borrowing moves, and message/transaction signing.
 - **Shared agent/payment architecture** — One WalletBackend powers browser app, mobile paths, desktop shell, CLI, MCP tools, Vercel AI tools, Solana Agent Kit adapter, A2A AgentCard metadata, and AP2/ACP/MPP payment- adapter flows.
