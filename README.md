@@ -36,7 +36,7 @@ Solo-built production trading platform across web, iOS, and Android with 1,000+ 
   Built an end-to-end system for constructing, validating, and screening coding-agent benchmarks, with 25 complete task packages spanning builds, caches, databases, deployment, browser
   automation, and other engineering domains.
 
-  - **Repeated agent failures** — Five selected finalists produced 28 failed required deliverables across 30 counted trials: seven tasks at 6/6 failures and two at 5/6, each tested with three
+  - **Repeated agent failures** — Five selected finalists produced 28 failed required deliverables across 30 counted trials: 10 tasks at 6/6 failures and two at 5/6, each tested with three
   Codex and three Claude runs.
   - **Evaluation infrastructure** — Versioned task packages, isolated solver/verifier workspaces, native Harbor exports, durable execution tracking, concurrency controls, and preserved
   submissions for reproducible analysis.
