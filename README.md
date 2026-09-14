@@ -33,17 +33,17 @@ Solo-built production trading platform across web, iOS, and Android with 1,000+ 
 
 ### [Agent Eval Foundry](https://github.com/mstevens843/agent-eval-foundry) - AI Agent Benchmark Production System
 
-  Built an end-to-end system for constructing, validating, and screening coding-agent benchmarks, with 25 complete task packages spanning builds, caches, databases, deployment, browser
-  automation, and other engineering domains.
+Built an end-to-end system for constructing, validating, and screening coding-agent benchmarks. Completed screening and history audits across **25 task packages and 170 physical agent attempts**, spanning builds, caches, databases, deployment, browser automation, and other engineering domains.
 
-  - **Repeated agent failures** — Five selected finalists produced 28 failed required deliverables across 30 counted trials: 10 tasks at 6/6 failures and two at 5/6, each tested with three
-  Codex and three Claude runs.
-  - **Evaluation infrastructure** — Versioned task packages, isolated solver/verifier workspaces, native Harbor exports, durable execution tracking, concurrency controls, and preserved
-  submissions for reproducible analysis.
-  - **Verifier integrity** — Validated graders against correct references, legitimate alternative implementations, deliberately broken controls, and isolation checks; preserved original grades
-  alongside documented corrections and excluded attempts.
-  - **Concrete failure analysis** — Exposed required checkers that accepted publication before compiler issuance, missed stale cache metadata, or rejected valid recovery—even when the agents’
-  service implementations passed their test suites.
+- **Audited screening results** — **12 task histories met the failure target: nine at 6/6 failures and three at 5/6**, totaling **69 failed required deliverables across 72 counted trials**. Each selected history includes three Claude and three Codex runs, with requested configurations of Claude Opus 5 at max effort and GPT-5.6 Sol through Codex at xhigh.
+- **Evaluation infrastructure** — Versioned task packages, isolated solver/verifier workspaces, native Harbor exports, durable execution tracking, concurrency controls, and preserved submissions for reproducible analysis and grading recovery.
+- **Two-sided grader validation** — Tested correct references, materially different valid implementations, deliberately broken controls, and mutated checker predicates. Expanded permanent coverage to catch invalid executions while preserving valid recovery paths, restarts, and permitted metadata.
+- **Concrete failure analysis** — In Incremental Build, all six services passed their service tests, while all six submitted checkers accepted publication before compiler issuance. Traced other failures to ordering violations, stale state, and rejection of legitimate alternative behavior.
+- **Fairness and traceability** — Audited all 25 histories, investigated false passes and false rejections, and preserved original evidence alongside corrections, null dispositions, and replacement runs. Disputed outcomes and confirmed benchmark defects remain separate from the supported results.
+
+These results reflect adaptive task screening across versioned histories, not an unbiased model failure-rate study. Separate required adversarial validation and formal qualification remain outstanding.
+
+  [Final results, fairness findings, and evidence](https://github.com/mstevens843/agent-eval-foundry/blob/main/docs/project-completion-2026-09-13.md
 
 ### [Capability Record Replay](https://github.com/mstevens843/capability-record-replay) - Deterministic Agent Automation Runtime
 
